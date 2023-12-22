@@ -1,0 +1,23 @@
+p, h1 {
+    font-family:'Courier New', Courier, monospace;
+}
+
+h1 {
+    text-align: center;
+}
+
+html {
+    background-color: lightskyblue;
+}
+
+.navbar-styling {
+    color:aqua;
+}
+
+.banner {
+    background-color: #ffebbe;
+    font-family: 'Pangolin';
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
