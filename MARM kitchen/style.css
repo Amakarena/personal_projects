@@ -133,7 +133,7 @@ body.show-mobile-menu header::before {
     display: flex;
     align-items: center;
     /* controls amount of subheader cut off by the fixed navbar */
-    min-height: 130vh;
+    min-height: 100vh;
     color: var(--white-color);
     justify-content: space-between;
 }
@@ -258,9 +258,14 @@ body.show-mobile-menu header::before {
         justify-content: center;
     }
 
-
     .hero-section .hero-image-wrapper {
         max-width: 270px;
         margin-top: 0;
     }
 }
+
+/* PROBLEM LOG
+4/9/26 - moo deng size doesn't change when I change the px value.
+         also the 'x' font awesome icon won't go away on pc, only on mobile.
+
+*/
