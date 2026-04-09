@@ -158,7 +158,9 @@ body.show-mobile-menu header::before {
 }
 
 .hero-section .hero-details .button {
-    display: flex;
+    /* controls the size of the buttons */
+    display: fixed;
+    /* gap between hero section details and navbar */
     gap: 23px;
 }
 
