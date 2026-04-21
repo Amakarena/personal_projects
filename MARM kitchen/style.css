@@ -209,7 +209,7 @@ body.show-mobile-menu header::before {
     margin-right: 30px;
 }
 
-/* About seciton stuffs (styling) */
+/* About section stuffs (styling) */
 .about-section {
     padding: 120px 0;
     background: var(--light-pink-color);
@@ -249,14 +249,67 @@ body.show-mobile-menu header::before {
     justify-content: center;
 }
 
-.about-section .social-link-list .social-link {
+.about-section .about-details .social-link-list .social-link {
     color: var(--primary-color);
     font-size: var(--font-size-l);
     transition: 0.2s ease;
 }
 
-.about-seciton .social-link-list .social-link:hover {
+.about-section .about-details .social-link-list .social-link:hover {
     color: var(--secondary-color);
+}
+
+/* Menu Section */
+.menu-section {
+    color: var(--white-color);
+    background-color: var(--dark-color);
+    padding: 50px 0 100px;
+}
+
+.menu-section .menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 110px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-section .menu-list .menu-item {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(100% / 3 - 110px);
+}
+
+.menu-section .menu-list .menu-item .menu-image {
+    max-width: 83%;
+    aspect-ratio: 1;
+    margin-bottom: 15px;
+    object-fit: contain;
+}
+
+.menu-section .menu-list .menu-item .name {
+    margin: 12px 0;
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-semibold);
+}
+
+.menu-section .menu-list .menu-item .text {
+    font-size: var(--font-size-m);
+
+}
+
+/* responsive media query code for max width 1024px */
+@media screen and (max-width: 1024px) {
+    .menu-section .menu-list {
+        gap: 60px;;
+    }
+
+    .menu-section .menu-list .menu-item {
+        width: calc(100% / 3 - 60px);
+    }
 }
 
 /* formatting for a smaller screen */
@@ -318,7 +371,7 @@ body.show-mobile-menu header::before {
     }
 
     .hero-section .hero-details :is(.subtitle, .description), 
-     .about-seciton .about-details {
+     .about-section .about-details {
         max-width: 100%;
     }
 
@@ -331,7 +384,7 @@ body.show-mobile-menu header::before {
         margin-top: 0;
     }
 
-    .about-seciton .section-content {
+    .about-section .section-content {
         gap: 70px;
         flex-direction: column-reverse;
     }
@@ -342,12 +395,35 @@ body.show-mobile-menu header::before {
         max-width: 250px;
         aspect-ratio: 1;
     }
+
+    .menu-section .menu-list {
+        gap: 30px;;
+    }
+
+    .menu-section .menu-list .menu-item {
+        width: calc(100% / 2 - 30px);
+    }
+
+    .menu-section .menu-list .menu-item .menu-image {
+        max-width: 200px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .menu-section .menu-list {
+        gap: 60px;;
+    }
+    
+    .menu-section .menu-list .menu-list {
+        width: 100%;
+    }    
 }
 
 /* PROBLEM LOG
 4/9/26 - moo deng size doesn't change when I change the px value.
          also the 'x' font awesome icon won't go away on pc, only on mobile.
 
-4/20/26 - socials icons not transitioning to secondary color when
-          hovered over. See lines 525-560.
+4/20/26 RESOLVED - socials icons not transitioning to secondary color when
+          hovered over. See lines 525-560. RESOLVED: it was a typo oh my days you
+          couldve found that urself instead of asking chat.
 */
